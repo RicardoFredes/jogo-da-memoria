@@ -1,8 +1,8 @@
 const images01 = [
-  "/img/cards/donald.webp",
-  "/img/cards/margarida.jpg",
-  "/img/cards/mickey.jpg",
-  "/img/cards/minnie.webp",
-  "/img/cards/pateta.jpg",
-  "/img/cards/pluto.jpg",
+  "/jogo-da-memoria/img/cards/donald.webp",
+  "/jogo-da-memoria/img/cards/margarida.jpg",
+  "/jogo-da-memoria/img/cards/mickey.jpg",
+  "/jogo-da-memoria/img/cards/minnie.webp",
+  "/jogo-da-memoria/img/cards/pateta.jpg",
+  "/jogo-da-memoria/img/cards/pluto.jpg",
 ]
