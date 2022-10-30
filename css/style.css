@@ -29,7 +29,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url(/jogo-da-memoria/img/confetti.gif);
+  background: url(/../img/confetti.gif);
 }
 
 .game-board {
@@ -58,7 +58,7 @@ body {
   border: 1px solid black;
   outline: none;
   cursor: pointer;
-  background-image: url(/jogo-da-memoria/img/pattern.jpg);
+  background-image: url(/../img/pattern.jpg);
   background-color: brown;
   background-repeat: no-repeat;
   background-size: cover;
