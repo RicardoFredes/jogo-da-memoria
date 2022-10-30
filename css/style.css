@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'VT323', monospace;
+  overflow: hidden;
+}
+
+.game {
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 1rem;
+}
+
+.cards[win]::after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(/img/confetti.gif);
+}
+
+.game-board {
+  width: 100%;
+  max-width: 600px;
+}
+.game-board__header {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem;
+}
+
+.button-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: transparent;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+  background-image: url(/img/pattern.jpg);
+  background-color: brown;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: border ease 350ms;
+}
+
+.button-card > img {
+  opacity: 0;
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: all ease 350ms;
+}
+
+.button-card[open="false"] {
+  animation: turn-card2 350ms ease forwards;
+}
+.button-card[open="true"] {
+  background-image: none;
+  background-color: transparent;
+  border-color: white;
+  animation: turn-card1 350ms ease forwards;
+}
+
+.button-card[open="true"] > img {
+  opacity: 1;
+}
+
+.button-card:disabled {
+  border-color: black;
+  cursor: default;
+  animation: ok 500ms ease forwards;
+}
+.button-card:disabled > img {
+  opacity: 0.5;
+}
+
+.button-card:not(:disabled):hover {
+  border-color: white;
+}
+
+@keyframes turn-card1 {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes turn-card2 {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes ok {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(15deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
