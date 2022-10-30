@@ -8,15 +8,14 @@
 body {
   font-size: 16px;
   font-family: 'VT323', monospace;
-  overflow: hidden;
+  user-select: none;
 }
 
 .game {
-  height: 100vh;
+  min-height: 100vh;
   background: black;
   color: white;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   padding: 1rem;
 }
